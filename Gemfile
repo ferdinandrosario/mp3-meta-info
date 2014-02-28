@@ -36,3 +36,24 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'figaro'
+gem 'mysql2'
+gem 'therubyracer', :platform=>:ruby
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
+  gem 'rails_layout'
+end
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'database_cleaner', '1.0.1'
+  gem 'email_spec'
+end
+
