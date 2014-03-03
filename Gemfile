@@ -9,6 +9,10 @@ end
 gem 'jquery-rails'
 gem 'figaro'
 gem 'mysql2'
+gem 'taglib-ruby'
+gem "paperclip",'3.5.4'
+gem 'aws-sdk'
+gem 'ruby-mp3info', :require => 'mp3info'
 gem 'therubyracer', :platform=>:ruby
 group :development do
   gem 'better_errors'

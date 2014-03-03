@@ -50,5 +50,12 @@ Audio::Application.configure do
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"]
   }
-
+ config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => Figaro.env.S3_BUCKET,
+    :access_key_id => Figaro.env.S3_ACCESS_KEY,
+    :secret_access_key => Figaro.env.S3_SECRET_KEY
+  }
+}
 end
