@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <b>Artist:</b>
+  <%= @audio_file.artist %>
+</p>
+
+<p>
+  <b>Album:</b>
+  <%= @audio_file.album %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @audio_file.title %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%= @audio_file.genre %>
+</p>
+
+<p>
+  <b>Track number:</b>
+  <%= @audio_file.track_number %>
+</p>
+
+<p>
+  <b>Year of release:</b>
+  <%= @audio_file.year_of_release %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @audio_file.comments %>
+</p>
+
+<p>
+  <b>Bitrate:</b>
+  <%= @audio_file.bitrate %>
+</p>
+
+<p>
+  <b>No of channels:</b>
+  <%= @audio_file.no_of_channels %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @audio_file.length %>
+</p>
+
+<p>
+  <b>Sample rate:</b>
+  <%= @audio_file.sample_rate %>
+</p>
+
+<%= link_to 'Back', audio_files_path %>

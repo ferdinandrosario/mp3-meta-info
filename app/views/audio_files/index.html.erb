@@ -1,0 +1,43 @@
+<h1>Listing audio_files</h1>
+
+<table>
+  <tr>
+    <th>Artist</th>
+    <th>Album</th>
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Track number</th>
+    <th>Year of release</th>
+    <th>Comments</th>
+    <th>Bitrate</th>
+    <th>No of channels</th>
+    <th>Length</th>
+    <th>Sample rate</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @audio_files.each do |audio_file| %>
+  <tr>
+    <td><%= audio_file.artist %></td>
+    <td><%= audio_file.album %></td>
+    <td><%= audio_file.title %></td>
+    <td><%= audio_file.genre %></td>
+    <td><%= audio_file.track_number %></td>
+    <td><%= audio_file.year_of_release %></td>
+    <td><%= audio_file.comments %></td>
+    <td><%= audio_file.bitrate %></td>
+    <td><%= audio_file.no_of_channels %></td>
+    <td><%= audio_file.length %></td>
+    <td><%= audio_file.sample_rate %></td>
+    <td><%= link_to 'Show', audio_file %></td>
+    <td><%= link_to 'Edit', edit_audio_file_path(audio_file) %></td>
+    <td><%= link_to 'Destroy', audio_file, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Audio file', new_audio_file_path %>

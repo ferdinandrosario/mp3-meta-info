@@ -11,6 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20140301065311) do
+
+  create_table "audio_files", :force => true do |t|
+    t.string   "artist"
+    t.string   "album"
+    t.string   "title"
+    t.string   "genre"
+    t.integer  "track_number"
+    t.integer  "year_of_release"
+    t.string   "comments"
+    t.string   "bitrate"
+    t.integer  "no_of_channels"
+    t.integer  "length"
+    t.integer  "sample_rate"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "audio_file_name"
+    t.string   "audio_content_type"
+    t.integer  "audio_file_size"
+    t.datetime "audio_updated_at"
+    t.text     "metadata"
+  end
 
 end

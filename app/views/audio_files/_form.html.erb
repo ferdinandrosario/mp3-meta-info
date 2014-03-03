@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+<!--       <h3 class="panel-title"><h3><span class="glyphicon glyphicon-upload"></span>  </h3></h3>
+ -->      </div>
+      <div class="panel-body">
+        <div class="jumbotron">
+          <%= form_for @audio_file, :url => audio_files_path, :html => { :multipart => true } do |a| %>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-lg-6 text-left">
+                <label for="inputEmail3" class="control-label">Choose a MP3 audio file </label>
+              </div>
+              <div class="col-lg-6 text-right">
+                <%= a.file_field :audio,:onchange =>"validateFiles(this);"  %>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-12">
+                <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+                Upload
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
