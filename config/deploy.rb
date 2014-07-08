@@ -73,7 +73,7 @@ ssh_options[:verbose] = Logger::DEBUG
 set :rvm_path, "/home/user/.rvm"
 set :default_shell, "/bin/bash"
 set :default_environment, {
-  'BUNDLE_PATH' => '/home/ferdinand/.rvm/gems/ruby-2.1.2@global/bin/',
+  'BUNDLE_PATH' => '/home/ferdinand/.rvm/gems/ruby-2.1.2@global/bin/bundle',
   'GEM_HOME' => '/home/ferdinand/.rvm/gems/ruby-2.1.2',
   'GEM_PATH' => '/home/ferdinand/.rvm/gems/ruby-2.1.2:/home/ferdinand/.rvm/gems/ruby-2.1.2@global',
   'PATH' => '/home/ferdinand/.rvm/gems/ruby-2.1.2/bin:/home/ferdinand/.rvm/gems/ruby-2.1.2@global/bin:/home/ferdinand/.rvm/gems/ruby-2.1.2/bin:/home/ferdinand/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games'
