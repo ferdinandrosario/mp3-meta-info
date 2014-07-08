@@ -190,7 +190,6 @@ DEPENDENCIES
   factory_girl_rails
   figaro
   jquery-rails
-  json (= 1.8.1)
   mysql2
   net-ssh (= 2.7.0)
   paperclip (= 3.5.4)
