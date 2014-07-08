@@ -39,7 +39,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.0.4)
-    capistrano (2.15.0)
+    capistrano (2.14.2)
       highline
       net-scp (>= 1.0.0)
       net-sftp (>= 2.0.0)
@@ -183,7 +183,7 @@ DEPENDENCIES
   aws-sdk
   better_errors
   binding_of_caller
-  capistrano (= 2.15.0)
+  capistrano (= 2.14.2)
   coffee-rails (~> 3.2.1)
   database_cleaner (= 1.0.1)
   email_spec
