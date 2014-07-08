@@ -41,21 +41,21 @@ Audio::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: ENV["DOMAIN_NAME"],
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"]
-  }
- config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => Figaro.env.S3_BUCKET,
-    :access_key_id => Figaro.env.S3_ACCESS_KEY,
-    :secret_access_key => Figaro.env.S3_SECRET_KEY
-  }
-}
+#   config.action_mailer.smtp_settings = {
+#     address: "smtp.gmail.com",
+#     port: 587,
+#     domain: ENV["DOMAIN_NAME"],
+#     authentication: "plain",
+#     enable_starttls_auto: true,
+#     user_name: ENV["GMAIL_USERNAME"],
+#     password: ENV["GMAIL_PASSWORD"]
+#   }
+#  config.paperclip_defaults = {
+#   :storage => :s3,
+#   :s3_credentials => {
+#     :bucket => Figaro.env.S3_BUCKET,
+#     :access_key_id => Figaro.env.S3_ACCESS_KEY,
+#     :secret_access_key => Figaro.env.S3_SECRET_KEY
+#   }
+# }
 end
