@@ -27,7 +27,7 @@ require 'net/ssh'
 # set :rvm_type, :user
 set :application, "mp3-meta-info"
 set :deploy_to, "/var/www/mp3-meta-info.com"
-set :bundle_cmd, "/home/ferdinand/.rvm/gems/ruby-2.1.2@global/bin/bundle"
+set :bundle_cmd, "/home/ferdinand/.rvm/gems/ruby-2.0.0-p195@global/bin/bundle"
 
 #############################################################
 # Servers
@@ -73,10 +73,10 @@ ssh_options[:verbose] = Logger::DEBUG
 set :rvm_path, "/home/user/.rvm"
 set :default_shell, "/bin/bash"
 set :default_environment, {
-  'BUNDLE_PATH' => '/home/ferdinand/.rvm/gems/ruby-2.1.2@global/bin/bundle',
-  'GEM_HOME' => '/home/ferdinand/.rvm/gems/ruby-2.1.2',
-  'GEM_PATH' => '/home/ferdinand/.rvm/gems/ruby-2.1.2:/home/ferdinand/.rvm/gems/ruby-2.1.2@global',
-  'PATH' => '/home/ferdinand/.rvm/gems/ruby-2.1.2/bin:/home/ferdinand/.rvm/gems/ruby-2.1.2@global/bin:/home/ferdinand/.rvm/gems/ruby-2.1.2/bin:/home/ferdinand/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games'
+  'BUNDLE_PATH' => '/home/ferdinand/.rvm/gems/ruby-2.0.0-p195@global/bin/bundle',
+  'GEM_HOME' => '/home/ferdinand/.rvm/gems/ruby-2.0.0-p195',
+  'GEM_PATH' => '/home/ferdinand/.rvm/gems/ruby-2.0.0-p195:/home/ferdinand/.rvm/gems/ruby-2.0.0-p195@global',
+  'PATH' => '/home/ferdinand/.rvm/gems/ruby-2.0.0-p195/bin:/home/ferdinand/.rvm/gems/ruby-2.0.0-p195@global/bin:/home/ferdinand/.rvm/gems/ruby-2.0.0-p195/bin:/home/ferdinand/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games'
 }
 set :rails_env, "test"
 set :sudopass, "ROSArio123~"
@@ -139,7 +139,7 @@ namespace :deploy do
   task :precompile do
     puts "********Start Precompile*******************"
     #run "cd #{deploy_to}/current"
-    run "cd /var/www/mp3-meta-info.com/current && '/home/ferdinand/.rvm/gems/ruby-2.1.2@global/bin/bundle exec rake assets:precompile RAILS_ENV=production"
+    run "cd /var/www/mp3-meta-info.com/current && '/home/ferdinand/.rvm/gems/ruby-2.0.0-p195@global/bin/bundle exec rake assets:precompile RAILS_ENV=production"
     puts "********End Precompile*******************"
     #run "bundle exec rake assets:precompile RAILS_ENV=production" #"cd #{deploy_to}/current && /usr/local/rvm/rubies/ruby-1.9.3-p286/bin/bundle"
   end
