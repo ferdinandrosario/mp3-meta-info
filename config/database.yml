@@ -1,0 +1,29 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: mp3_meta_development
+  pool: 5
+  username: root
+  password: clarion@123
+  socket: /var/run/mysqld/mysqld.sock
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: mp3_meta_test
+  pool: 5
+  username: root
+  password: clarion@123
+  socket: /var/run/mysqld/mysqld.sock
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: mp3_meta_production
+  pool: 5
+  username: root
+  password: clarion@123
+  socket: /var/run/mysqld/mysqld.sock
