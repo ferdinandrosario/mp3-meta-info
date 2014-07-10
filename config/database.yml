@@ -5,7 +5,7 @@ development:
   database: mp3_meta_development
   pool: 5
   username: root
-  password: clarion@123
+  password: root
   socket: /var/run/mysqld/mysqld.sock
 
 test:
@@ -15,7 +15,7 @@ test:
   database: mp3_meta_test
   pool: 5
   username: root
-  password: clarion@123
+  password: root
   socket: /var/run/mysqld/mysqld.sock
 
 production:
@@ -25,5 +25,5 @@ production:
   database: mp3_meta_production
   pool: 5
   username: root
-  password: clarion@123
+  password: root
   socket: /var/run/mysqld/mysqld.sock
