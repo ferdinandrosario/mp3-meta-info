@@ -9,20 +9,10 @@ development:
   password: root
   socket: /var/run/mysqld/mysqld.sock
 
-# test:
-#   adapter: mysql2
-#   encoding: utf8
-#   reconnect: false
-#   database: mp3_meta_test
-#   pool: 5
-#   username: root
-#   password: root
-#   socket: /var/run/mysqld/mysqld.sock
 test:
-  adapter: mysql2
-  database: myapp_test
-  username: travis
-  encoding: utf8
+  adapter: postgresql
+  database: travis_ci_test
+  username: postgres
 
 production:
   adapter: mysql2

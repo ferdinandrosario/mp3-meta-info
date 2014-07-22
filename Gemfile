@@ -12,7 +12,7 @@ group :assets do
 end
 gem 'jquery-rails'
 gem 'figaro'
-gem 'mysql2'
+gem 'pg'
 gem 'taglib-ruby','0.6.0'
 gem "paperclip",'3.5.4'
 gem 'aws-sdk'
