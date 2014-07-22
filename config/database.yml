@@ -1,13 +1,9 @@
 #From Github
 development:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: mp3_meta_development
-  pool: 5
-  username: root
+  adapter: postgresql
+  database: mp3_ci_dev
+  username: postgres
   password: root
-  socket: /var/run/mysqld/mysqld.sock
 
 test:
   adapter: postgresql
@@ -15,11 +11,6 @@ test:
   username: postgres
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: mp3_meta_production
-  pool: 5
-  username: root
-  password: root
-  socket: /var/run/mysqld/mysqld.sock
+  adapter: postgresql
+  database: travis_ci_test
+  username: postgres
