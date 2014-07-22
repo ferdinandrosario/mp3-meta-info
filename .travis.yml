@@ -4,12 +4,13 @@ rvm:
 
 env:
   - DB=mysql
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y libtag1-dev
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec/
 before_script:
-  - "sudo apt-get install -y libtag1-dev"
   - mysql -e 'create database my_app_test'
-  - psql -c 'create database my_app_test' -U postgres
 bundler_args: --binstubs=./bundler_stubs
