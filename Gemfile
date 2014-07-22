@@ -25,9 +25,10 @@ group :development do
 end
 group :development, :test do
   gem 'factory_girl_rails'
-  gem 'rspec-rails'
+  gem 'rspec-rails','2.14.2'
 end
 group :test do
   gem 'database_cleaner', '1.0.1'
   gem 'email_spec'
+  gem 'shoulda-matchers'
 end
