@@ -5,7 +5,6 @@ env:
   - DB=mysql
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install -y libtag1-dev
 install:
   - "bundle install --deployment --without production"
 branches:
@@ -16,5 +15,5 @@ script:
   - bundle exec rake db:test:prepare
   - bundle exec rake
 before_script:
-  - git config --global user.name "ferdinandrosario"
   - mysql -e 'create database myapp_test'
+  - "sudo apt-get install -y libtag1-dev"
