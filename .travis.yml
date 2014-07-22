@@ -14,3 +14,4 @@ before_script:
   # - cp config/database.travis.yml config/database.yml
   - mysql -e 'create database myapp_test'
   # - psql -c 'create database strano_test' -U postgres
+  - sudo apt-get install libtag1-dev
