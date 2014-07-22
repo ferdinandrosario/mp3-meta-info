@@ -6,12 +6,14 @@ env:
   # - DB=sqlite
   - DB=mysql
   # - DB=postgresql
+before_install:
+  - sudo apt-get install libtag1-dev
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rake
 before_script:
+  - git config --global user.name "ferdinandrosario"
   # - cp config/database.travis.yml config/database.yml
   - mysql -e 'create database myapp_test'
   # - psql -c 'create database strano_test' -U postgres
-  - sudo apt-get install libtag1-dev
